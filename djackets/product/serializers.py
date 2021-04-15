@@ -4,12 +4,12 @@ from .models import Category, Product
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = {
+        fields = (
             "id",
             "name",
-            "url", 
+            "get_absolute_url",
             "description",
             "price",
-            "image",
-            "thumbnail",
-        }
+            "get_image",
+            "get_thumbnail"
+        )
